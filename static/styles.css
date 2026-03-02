@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap");
+
+:root {
+    --blue-deep: #1E3A8A;
+    --blue-main: #3B82F6;
+    --blue-accent: #60A5FA;
+    --slate-bg: #F1F5F9;
+    --card-bg: rgba(255, 255, 255, 0.94);
+    --text-dark: #0F172A;
+    --text-light: #475569;
+    --border-soft: rgba(59, 130, 246, 0.18);
+}
+
+.stApp {
+    background:
+        radial-gradient(circle at 8% 8%, rgba(96, 165, 250, 0.22), transparent 40%),
+        radial-gradient(circle at 92% 22%, rgba(30, 58, 138, 0.16), transparent 35%),
+        linear-gradient(145deg, #f8fbff 0%, var(--slate-bg) 55%, #e7efff 100%);
+    color: var(--text-dark);
+}
+
+.main .block-container {
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
+    max-width: 1220px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-dark);
+}
+
+p,
+span,
+label,
+div {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.brand-strip {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    padding: 0.95rem 1.2rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.08);
+}
+
+.brand-strip img {
+    width: 180px;
+    border-radius: 10px;
+}
+
+.brand-strip h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--blue-deep);
+}
+
+.brand-strip p {
+    margin: 0.2rem 0 0;
+    color: var(--text-light);
+}
+
+.metric-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 1rem;
+    min-height: 112px;
+    box-shadow: 0 7px 18px rgba(59, 130, 246, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(59, 130, 246, 0.16);
+}
+
+.metric-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.metric-card p {
+    margin: 0.7rem 0 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue-deep);
+}
+
+.section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 7px 18px rgba(30, 58, 138, 0.08);
+    margin-bottom: 1rem;
+}
+
+.result-card {
+    background: linear-gradient(145deg, #eef5ff, #ffffff);
+    border-left: 5px solid var(--blue-main);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.12);
+}
+
+.result-card h4,
+.result-card h5 {
+    margin-bottom: 0.3rem;
+    color: var(--blue-deep);
+}
+
+div[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #dbeafe 0%, #eff6ff 45%, #f8fbff 100%);
+    border-right: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+div[data-testid="stSidebar"] .stRadio > div {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(59, 130, 246, 0.22);
+    border-radius: 12px;
+    padding: 0.6rem;
+}
+
+.stButton > button,
+.stFormSubmitButton > button {
+    background: linear-gradient(125deg, var(--blue-deep) 0%, var(--blue-main) 55%, var(--blue-accent) 100%);
+    color: white;
+    border: none;
+    border-radius: 11px;
+    padding: 0.5rem 0.95rem;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(30, 58, 138, 0.2);
+}
+
+.stTextInput > div > div > input,
+.stTextArea textarea,
+.stDateInput input,
+.stSelectbox div[data-baseweb="select"] {
+    border-radius: 10px;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+@media (max-width: 900px) {
+    .brand-strip {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-strip img {
+        width: 150px;
+    }
+
+}
